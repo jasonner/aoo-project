@@ -1,0 +1,350 @@
+
+*,
+::before,
+::after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+/*
+  静止用户拷贝文字，在需要的时候可以打开
+  -webkit-user-select: none;
+  user-select: none;
+*/
+html {
+    background-color: #fff;
+    color: #212121;
+    font-size: 100px;
+    /* font-size: 26.6667vw; */
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+/*
+  消除字体抗锯齿
+  -webkit-font-smoothing: antialiased;
+*/
+body {
+    font-size: 0.16em;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    font-family: Microsoft Yahei, PingFangSC-Regular, Hiragino Sans GB, sans-serif
+}
+
+/*
+  在移动端，我们不要在 *{}写 margin\padding=0
+  要又针对性的写
+*/
+html,
+body,
+div,
+ul,
+ol,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+figure,
+form,
+fieldset,
+legend,
+input,
+textarea,
+button,
+p,
+blockquote,
+th,
+td,
+pre {
+    margin: 0;
+    padding: 0;
+}
+
+/*
+  以下样式没有继承
+  inherit 写了就继承了父级的样式
+*/
+input,
+textarea,
+button,
+select,
+pre,
+tt,
+code,
+kbd,
+samp {
+    line-height: inherit;
+    font-family: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+small,
+big,
+input,
+textarea,
+button,
+select {
+    font-size: inherit;
+}
+
+/*
+  以下样式是斜体
+  写了 normal 就是正常的
+*/
+address,
+cite,
+dfn,
+em,
+i,
+optgroup,
+var {
+    font-style: normal;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    table-layout: fixed;
+    text-align: left;
+}
+
+ul,
+ol,
+menu {
+    list-style: none;
+}
+
+fieldset,
+img {
+    border: 0;
+    vertical-align: middle;
+    object-fit: fill;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+summary {
+    display: block;
+}
+
+/*
+  audio canvas video 是行内元素
+  移动端修改为行内块元素
+*/
+audio,
+canvas,
+video {
+    display: inline-block;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: "\0020";
+}
+
+/*
+  触摸滚动
+  -webkit-overflow-scrolling: touch;
+*/
+textarea,
+pre,
+xmp {
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+/*
+  resize: vertical;
+  允许纵向拖动、不允许横向
+*/
+textarea {
+    resize: vertical;
+}
+
+
+input,
+textarea,
+button,
+select,
+summary,
+a {
+    outline: 0 none;
+}
+
+/*
+  opacity:1  不透明
+*/
+input,
+textarea,
+button,
+select {
+    color: inherit;
+}
+
+input:disabled,
+textarea:disabled,
+button:disabled,
+select:disabled {
+    opacity: 1;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="file"]::-webkit-file-upload-button,
+input[type="search"]::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+::marker {
+    display: none;
+}
+
+/*
+  <mark> 带有标记的文本
+*/
+mark {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+a,
+ins,
+s,
+u,
+del {
+    text-decoration: none;
+}
+
+/*
+  取消外边框线
+  -webkit-touch-callout: none;
+*/
+a,
+img {
+    -webkit-touch-callout: none;
+}
+
+a {
+    color: #00afc7;
+}
+
+/*
+  移动端一般用弹性盒、不用浮动
+  浮动与弹性盒互斥
+*/
+.g-clear::after,
+.g-mod::after {
+    display: block;
+    overflow: hidden;
+    clear: both;
+    height: 0;
+    content: "\0020";
+}
+
+@font-face {
+    font-family: yofont;
+    src: url(//ss.qunarzz.com/yo/font/1.0.3/yofont.woff) format("woff"), url(//ss.qunarzz.com/yo/font/1.0.3/yofont.ttf) format("truetype");
+}
+
+.yo-ico {
+    font-family: yofont !important;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    vertical-align: middle;
+}
+
+video {
+    display: block;
+    width: 100%;
+}
+img{
+    display: block;
+    width: 100%;
+}
+.d-flex {
+    display: -webkit-flex;
+    display: flex;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.justify-content-between {
+    justify-content: space-between;
+}
+
+.justify-content-around {
+    justify-content: space-around;
+}
+
+.flex-fill,
+.flex-fill-oh {
+    -webkit-flex: 1;
+    flex: 1;
+}
+
+.flex-fill-oh {
+    overflow: hidden;
+}
+.f-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.flexpage {
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+}
+.d-flex-colum{
+    display: -webkit-flex;
+    display: flex; 
+    flex-direction: column;
+}

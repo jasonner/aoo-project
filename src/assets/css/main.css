@@ -1,0 +1,32 @@
+@import "reset.css";
+
+
+.logo {
+  width: 100vw;
+  height: 10.93vw;
+  padding: 5.07vw 8vw 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+
+.logo img {
+  height: 100%;
+  width: auto;
+}
+
+.logo .logo1 {
+  height: 4.13vw;
+}
+.box{
+  position: relative;
+}
+.fanhui {
+  height: 10vw;
+  width: 10vw;
+  position: absolute;
+  left: 2vw;
+  bottom: 5vw;
+  z-index: 9999;
+}
